@@ -89,7 +89,42 @@ void excerciseFunc(){
     cout << may << endl;
 }
 
-void excerciseArrays
+void excerciseArrays(){
+    int arr[1000];
+    int number, cases;
+    cin >> cases;
+    int i = 0;
+    while(i < cases){
+        cin >> number;
+        arr[i] = number;
+        i += 1;
+    }
+    i -= 1;
+    while(i >= 0){
+        cout << arr[i] << " ";
+        i -= 1;
+    }
+    cout << endl;
+}
 
+
+void excerciseString(){
+    string cad1, cad2;
+    cin >> cad1;
+    cin >> cad2;
+    cout << cad1.size() << " " << cad2.size() << endl;
+    for(int i = 0; i < cad1.size(); i++)
+        cout << cad1[i];
+    for(int i = 0; i < cad2.size(); i++)
+        cout << cad2[i];
+    cout << endl;
+    cout << cad2[0];
+    for(int i = 1; i < cad1.size(); i++)
+        cout << cad1[i];
+    cout << " " << cad1[0];
+    for(int i = 1; i < cad2.size(); i++)
+        cout << cad2[i];
+    cout << endl;
+}
 
 
