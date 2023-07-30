@@ -127,6 +127,62 @@ void excerciseString(){
     cout << endl;
 }
 
+// Ejercicio de clases
+
+string numberToString(int num){
+    string ans;
+    if(num == 0)
+        ans = "0";
+    else{
+        int number = num;
+        while (number > 0) {
+            char digito = '0' + (number % 10);
+            ans = digito + ans;
+            number /= 10;
+        }
+    }
+    return ans;
+}
+class Student
+{
+ private:
+    string first_name;
+    string last_name;
+    int age;
+    int standard;
+ public:
+    Student(){}
+    void set_age(int edad){
+        age = edad;
+    }  
+    void set_first_name(string nombre){
+        first_name = nombre;
+    }
+    void set_last_name(string apellido){
+        last_name = apellido;
+    }
+    void set_standard(int num){
+        standard = num;
+    }
+    int get_age(){
+        return age;
+    }
+    string get_first_name(){
+        return first_name;
+    }
+    string get_last_name(){
+        return last_name;
+    }
+    int get_standard(){
+        return standard;
+    }
+    string to_string(){
+        string ans = numberToString(age);
+        ans = ans + "," + first_name + "," +  last_name + "," + numberToString(standard); 
+        return ans;   
+    }   
+};
+
 
 
 
