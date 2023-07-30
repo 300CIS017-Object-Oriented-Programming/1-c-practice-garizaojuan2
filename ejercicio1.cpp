@@ -183,6 +183,55 @@ class Student
     }   
 };
 
+class Student{
+private:
+    vector<int> scores;
+    int total = 0;
+public:
+    Student(){}
+    void input(){
+        int num;
+        for(int i = 0; i < 5; i++){
+            cin >> num;
+            scores.push_back(num);
+            total += num;
+            
+        }
+    }
+    int calculateTotalScore(){
+        return total;
+    }
+};
 
+int ejercicio classObjects(){
+    int n; // number of students
+    cin >> n;
+    Student *s = new Student[n]; // an array of n students
+    
+    for(int i = 0; i < n; i++){
+        s[i].input();
+    }
+
+    // calculate kristen's score
+    int kristen_score = s[0].calculateTotalScore();
+
+    // determine how many students scored higher than kristen
+    int count = 0; 
+    for(int i = 1; i < n; i++){
+        int total = s[i].calculateTotalScore();
+        if(total > kristen_score){
+            count++;
+        }
+    }
+
+    // print result
+    cout << count;
+    
+    return 0;
+}
+
+int main(){
+    return 0;
+}
 
 
